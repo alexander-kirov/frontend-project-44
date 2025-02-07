@@ -9,24 +9,26 @@ export default () => {
 
   let i = 0;
 
+  const generateNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
   while (i < 3) {
-    const generateNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
     const number = generateNumber(1, 100);
     const question = `Question: ${number}`;
     console.log(question);
 
-    let even;
-    number % 2 === 0 ? even = 'yes' : even = 'no';
-  
+    const even = number % 2 === 0 ? 'yes' : 'no';
+
     const answer = readlineSync.question('Your answer: ');
-      if (answer === even) {
+    if (answer === even) {
       console.log('Correct!');
       i += 1;
-      } else {
+    } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${even}'.
 Let's try again, ${name}`);
-      return i = 4;
-      };
-  };
+      i = 4;
+      return i;
+    }
+  }
   console.log(`Congratulations, ${name}!`);
+  return `Congratulations, ${name}!`;
 };
