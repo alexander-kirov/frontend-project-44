@@ -6,3 +6,5 @@
 ### Example of work brain-even:
 https://asciinema.org/a/W3tBwCHvU9MIUykPkAoOwj1Cw
 
+### Example of work brain-calc:
+https://asciinema.org/connect/5c23d536-e9b5-4a50-bbce-c98c91d843bd
