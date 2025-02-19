@@ -13,4 +13,5 @@ lint: # запуск eslint
 brain-even: # запустить игру brain-even
 	node	bin/brain-even.js
 
-
+brain-calc: # запустить игру brain-calc
+	node	bin/brain-calc.js
