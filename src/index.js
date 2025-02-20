@@ -26,7 +26,7 @@ export const randomItem = (array) => {
   return result;
 }
 
-export const getLose = () => {
+/*export const getLose = () => {
   return `'${answer}' is wrong answer ;(. Correct answer was '${result}'.
 Let's try again, ${name}`;
-}
+}*/
