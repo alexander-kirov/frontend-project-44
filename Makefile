@@ -15,3 +15,6 @@ brain-even: # запустить игру brain-even
 
 brain-calc: # запустить игру brain-calc
 	node	bin/brain-calc.js
+
+brain-gcd: # запустить игру brain-gcd
+	node	bin/brain-gcd.js
