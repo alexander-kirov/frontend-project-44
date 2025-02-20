@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import { getUserName, generateNumber, randomItem, getAnswer } from '../index.js';
 
 export default () => {
