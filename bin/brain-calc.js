@@ -3,5 +3,3 @@
 import getCalc from '../src/games/calc.js';
 
 getCalc();
-
-

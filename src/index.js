@@ -5,14 +5,14 @@ import readlineSync from 'readline-sync';
 export const getUserName = () => {
   const getName = readlineSync.question('May I have your name? ');
   return getName;
-}
+};
 
 // Получение ответа пользователя
 
 export const getAnswer = () => {
   const answer = readlineSync.question('Your answer: ');
   return answer;
-}
+};
 
 // Случайное число
 
@@ -24,9 +24,9 @@ export const randomItem = (array) => {
   const randomIndex = Math.floor(Math.random() * array.length);
   const result = array[randomIndex];
   return result;
-}
+};
 
-/*export const getLose = () => {
+/* export const getLose = () => {
   return `'${answer}' is wrong answer ;(. Correct answer was '${result}'.
 Let's try again, ${name}`;
-}*/
+} */

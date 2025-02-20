@@ -3,5 +3,3 @@
 import getGcd from '../src/games/gcd.js';
 
 getGcd();
-
-
