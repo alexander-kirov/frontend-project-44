@@ -18,3 +18,6 @@ brain-calc: # запустить игру brain-calc
 
 brain-gcd: # запустить игру brain-gcd
 	node	bin/brain-gcd.js
+
+brain-progression: # запустить игру brain-progression
+	node	bin/brain-progression.js
