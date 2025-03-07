@@ -11,3 +11,6 @@ https://asciinema.org/a/E8lgfxRpZjsuZ57LEAJSL9qGM
 
 ### Example of work brain-gcd:
 https://asciinema.org/a/2vww0UpaRlXUN7F8wesAgXPNA
+
+### Example of work brain-progression:
+https://asciinema.org/a/vetvGhCSl9n2f3uiLD800Zevm
