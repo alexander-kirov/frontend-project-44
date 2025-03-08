@@ -14,3 +14,6 @@ https://asciinema.org/a/2vww0UpaRlXUN7F8wesAgXPNA
 
 ### Example of work brain-progression:
 https://asciinema.org/a/vetvGhCSl9n2f3uiLD800Zevm
+
+### Example of work brain-prime:
+https://asciinema.org/a/6YKcyZJ1cd0vhBhkbHbokoDai
