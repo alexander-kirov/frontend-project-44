@@ -10,20 +10,16 @@ export default () => {
   let i = 0;
   while (i < 3) {
     const num = generateNumber(1, 100);
-    console.log('ЧИСЛО', num);
     let result = '';
     const upperBorder = num / 2;
-    console.log(upperBorder);
     for (let divisor = 2; divisor <= upperBorder; divisor += 1) {
-	    console.log('ДЕЛИТЕЛЬ', divisor)
       if (num % divisor === 0) {
         result = 'no';
         divisor = num;
       } else {
-          result = 'yes';
+        result = 'yes';
       }
     }
-	  console.log('!!!!!!', result);
     const question = `Question: ${num}`;
     console.log(question);
     const answer = getAnswer();
