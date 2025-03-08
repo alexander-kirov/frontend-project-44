@@ -16,9 +16,9 @@ export default () => {
     console.log(upperBorder);
     for (let divisor = 2; divisor <= upperBorder; divisor += 1) {
 	    console.log('ДЕЛИТЕЛЬ', divisor)
-      const check = num % divisor;
-      if (check === 0) {
+      if (num % divisor === 0) {
         result = 'no';
+        divisor = num;
       } else {
           result = 'yes';
       }
