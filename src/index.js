@@ -1,32 +1,27 @@
 import readlineSync from 'readline-sync';
 
-// Запись имени пользователяi
+export const getStart = (generateQuestion, rules) => {
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!
+${rules}`);
 
-export const getUserName = () => {
-  const getName = readlineSync.question('May I have your name? ');
-  return getName;
+  let correctAnswers = 0;
+  while (correctAnswers < 3) {
+    const [question, result] = generateQuestion();
+    console.log(`Question: ${question}`);
+    const answer = readlineSync.question('Your answer: ');
+
+    if (answer === result) {
+      console.log('Correct!');
+      correctAnswers += 1;
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.
+Let's try again, ${name}`);
+      return;
+    }
+  }
+  console.log(`Congratulations, ${name}!`);
 };
-
-// Получение ответа пользователя
-
-export const getAnswer = () => {
-  const answer = readlineSync.question('Your answer: ');
-  return answer;
-};
-
-// Случайное число
 
 export const generateNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-
-// Случайный элемент массива
-
-export const randomItem = (array) => {
-  const randomIndex = Math.floor(Math.random() * array.length);
-  const result = array[randomIndex];
-  return result;
-};
-
-/* export const getLose = () => {
-  return `'${answer}' is wrong answer ;(. Correct answer was '${result}'.
-Let's try again, ${name}`;
-} */

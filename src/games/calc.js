@@ -1,40 +1,27 @@
-import { getUserName, generateNumber, randomItem, getAnswer } from '../index.js';
+import { getStart, generateNumber } from '../index.js';
+
+const operators = ['-', '+', '*'];
+
+const randomOperator = () => operators[Math.floor(Math.random() * operators.length)];
+
+const generateQuestion = () => {
+  const firstNumber = generateNumber(1, 100);
+  const secondNumber = generateNumber(1, 100);
+  const op = randomOperator();
+  const question = `${firstNumber} ${op} ${secondNumber}`;
+  let result;
+  if (op === '-') {
+    result = String(firstNumber - secondNumber);
+  } else if (op === '+') {
+    result = String(firstNumber + secondNumber);
+  } else if (op === '*') {
+    result = String(firstNumber * secondNumber);
+  }
+  return [question, result];
+};
+
+const rules = 'What is the result of the expression?';
 
 export default () => {
-  console.log('Welcome to the Brain Games!');
-  const name = getUserName();
-  console.log(`Hello, ${name}!`);
-
-  console.log('What is the result of the expression?');
-  let i = 0;
-  while (i < 3) {
-    const firstNumber = generateNumber(1, 100);
-    const secondNumber = generateNumber(1, 100);
-    const operators = ['-', '+', '*'];
-    const randomOperator = randomItem(operators);
-    const question = `Question: ${firstNumber} ${randomOperator} ${secondNumber}`;
-    console.log(question);
-
-    let result;
-    if (randomOperator === '-') {
-      result = String(firstNumber - secondNumber);
-    } else if (randomOperator === '+') {
-      result = String(firstNumber + secondNumber);
-    } else if (randomOperator === '*') {
-      result = String(firstNumber * secondNumber);
-    }
-
-    const answer = getAnswer();
-
-    if (answer === result) {
-      console.log('Correct!');
-      i += 1;
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.
-Let's try again, ${name}`);
-      i = 4;
-      return i;
-    }
-  }
-  console.log(`Congratulations, ${name}`);
+  getStart(generateQuestion, rules);
 };
