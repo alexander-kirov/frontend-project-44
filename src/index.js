@@ -17,7 +17,7 @@ ${rules}`);
       correctAnswers += 1;
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.
-Let's try again, ${name}`);
+Let's try again, ${name}!`);
       return;
     }
   }
